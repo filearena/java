@@ -1,0 +1,154 @@
+1. OOP Concepts – Class, Object & Methods: To implement basic Object-Oriented Programming concepts in Java.
+
+1.a) a) Create a class Student with data members and methods.
+
+Aim
+To create a Student class with data members and methods in Java.
+
+PROGRAM :-
+
+class Student {
+    // Data members
+    int rollNo;
+    String name;
+    int marks;
+    // Method to assign values
+    void getData() {
+        rollNo = 101;
+        name = "Rahul";
+        marks = 85;
+    }
+
+    // Method to display values
+    void displayData() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + marks);
+    }
+    // Main method
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.getData();
+        s.displayData();
+    }
+}
+
+OUTPUT :-
+
+Roll No: 101
+Name: Rahul
+Marks: 85
+
+
+b) Demonstrate Object Creation and Method Invocation
+
+Aim
+To demonstrate object creation and method invocation in Java.
+
+PROGRAM :- 
+
+class Student {
+    // Data members
+    int rollNo = 101;
+    String name = "Rahul";
+    // Method
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+    }
+    public static void main(String[] args) {
+        // Object creation
+        Student s = new Student();
+        // Method invocation
+        s.display();
+    }
+}
+
+OUTPUT :-
+
+Roll No: 101
+Name: Rahul 
+
+c) Implement Constructor (Default and Parameterized)
+
+Aim
+To implement default and parameterized constructors in Java.
+
+Program :- 
+
+class Student {
+    int rollNo;
+    String name;
+
+    // Default Constructor
+    Student() {
+        rollNo = 101;
+        name = "Rahul";
+    }
+
+    // Parameterized Constructor
+    Student(int r, String n) {
+        rollNo = r;
+        name = n;
+    }
+
+    // Method to display details
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        // Using Default Constructor
+        Student s1 = new Student();
+        // Using Parameterized Constructor
+        Student s2 = new Student(102, "Priya");
+        s1.display();
+        s2.display();
+    }
+}
+
+OUTPUT :- 
+
+Roll No: 101
+Name: Rahul
+
+Roll No: 102
+Name: Priya
+
+d) Demonstrate method overloading.
+Aim
+To demonstrate method overloading in Java.
+
+PROGRAM :-
+
+class Student {
+    // Method with no parameters
+    void display() {
+        System.out.println("Student Name: Rahul");
+    }
+    // Overloaded method with one parameter
+    void display(int marks) {
+        System.out.println("Marks: " + marks);
+    }
+    // Overloaded method with two parameters
+    void display(String name, int marks) {
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + marks);
+    }
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+        s.display(85);
+        s.display("Priya", 90);
+    }
+}
+
+OUTPUT :- 
+
+Student Name: Rahul
+Marks: 85
+Name: Priya
+Marks: 90
+
+
