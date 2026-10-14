@@ -1,0 +1,149 @@
+2. Inheritance and Polymorphism: To demonstrate inheritance and runtime polymorphism. 
+
+a) Create a base class Person and derived class Employee. 
+
+Aim:
+To create a base class Person and a derived class Employee using inheritance in Java.
+
+PROGRAM :- 
+
+// Base class
+class Person {
+    String name = "Rahul";
+    int age = 30;
+
+    void displayPerson() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Derived class
+class Employee extends Person {
+    int empId = 101;
+
+    void displayEmployee() {
+        System.out.println("Employee ID: " + empId);
+    }
+
+    public static void main(String[] args) {
+        Employee e = new Employee();
+
+        e.displayPerson();    // Inherited method
+        e.displayEmployee();  // Employee method
+    }
+}
+
+OUTPUT :- 
+
+Name: Rahul
+Age: 30
+Employee ID: 101
+
+B.Demonstrate Single Inheritance
+
+Aim:
+To demonstrate single inheritance in Java.
+
+Program :- 
+
+// Parent class
+class Person {
+    String name = "Rahul";
+
+    void showName() {
+        System.out.println("Name: " + name);
+    }
+}
+
+// Child class
+class Employee extends Person {
+    int empId = 101;
+
+    void showEmployee() {
+        System.out.println("Employee ID: " + empId);
+    }
+
+    public static void main(String[] args) {
+        Employee e = new Employee();
+
+        // Accessing parent class method
+        e.showName();
+
+        // Accessing child class method
+        e.showEmployee();
+    }
+}
+
+OUTPUT :- 
+
+Name: Rahul
+Employee ID: 101
+
+C.Override a Method to Show Runtime Polymorphism
+
+Aim
+To demonstrate runtime polymorphism using method overriding in Java.
+
+Program :-
+
+// Parent class
+class Person {
+    void display() {
+        System.out.println("This is Person class.");
+    }
+}
+
+// Child class
+class Employee extends Person {
+    @Override
+    void display() {
+        System.out.println("This is Employee class.");
+    }
+
+    public static void main(String[] args) {
+        // Parent class reference, Child class object
+        Person p = new Employee();
+
+        // Runtime Polymorphism
+        p.display();
+    }
+}
+
+
+OUTPUT :- 
+
+This is Employee class.
+
+d): Use super Keyword
+
+Aim
+To demonstrate the use of the super keyword in Java.
+
+Program :- 
+
+// Parent class
+class Person {
+    String name = "Rahul";
+}
+
+// Child class
+class Employee extends Person {
+    String name = "Priya";
+
+    void display() {
+        System.out.println("Child Name : " + name);
+        System.out.println("Parent Name: " + super.name);
+    }
+
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        e.display();
+    }
+}
+
+OUTPUT :- 
+
+Child Name : Priya
+Parent Name: Rahul
+
