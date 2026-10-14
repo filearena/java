@@ -1,0 +1,152 @@
+3. Abstraction and Interfaces: To implement abstraction using abstract classes and interfaces.
+
+3.a) Create an abstract class Shape with abstract method area().
+
+Aim:
+To create an abstract class Shape with an abstract method area() and implement it in a subclass.
+
+PROGRAM :- 
+
+abstract class Shape {
+    abstract void area();   // Abstract method
+}
+class Rectangle extends Shape {
+    int length = 10;
+    int width = 5;
+    void area() {
+        System.out.println("Area = " + (length * width));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle r = new Rectangle();
+        r.area();
+    }
+}
+
+OUTPUT :- 
+
+Area = 50
+
+
+3.b) Implement subclasses Circle and Rectangle. 
+
+Aim
+To implement Circle and Rectangle subclasses from an abstract class Shape and calculate their areas.
+
+PROGRAM :- 
+
+abstract class Shape {
+    abstract void area();
+}
+
+class Circle extends Shape {
+    double radius = 5;
+
+    void area() {
+        System.out.println("Area of Circle = " + (3.14 * radius * radius));
+    }
+}
+
+class Rectangle extends Shape {
+    int length = 10;
+    int width = 5;
+
+    void area() {
+        System.out.println("Area of Rectangle = " + (length * width));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape c = new Circle();
+        Shape r = new Rectangle();
+
+        c.area();
+        r.area();
+    }
+}
+
+OUTPUT :- 
+
+Area of Circle = 78.5
+Area of Rectangle = 50
+
+
+3.c) Create an interface Printable and implement it in a class. 
+
+Aim:
+To create an interface Printable and implement it in a class to demonstrate the use of interfaces in Java.
+
+PROGRAM :- 
+
+// Interface
+interface Printable {
+    void print();   // Abstract method
+}
+
+// Class implementing the interface
+class Document implements Printable {
+
+    public void print() {
+        System.out.println("Printing the document...");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Document d = new Document();
+        d.print();
+    }
+}
+
+Output :-
+
+Printing the document...
+
+3.d) Demonstrate multiple inheritance using interfaces.
+
+Aim:
+To demonstrate multiple inheritance in Java using interfaces.
+
+
+Program :- 
+
+// First Interface
+interface Animal {
+    void sound();
+}
+
+// Second Interface
+interface Bird {
+    void fly();
+}
+
+// Class implementing both interfaces
+class Bat implements Animal, Bird {
+
+    public void sound() {
+        System.out.println("Bat makes sound.");
+    }
+
+    public void fly() {
+        System.out.println("Bat can fly.");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Bat b = new Bat();
+        b.sound();
+        b.fly();
+    }
+}
+
+OUTPUT:- 
+
+Bat makes sound.
+Bat can fly.
+
