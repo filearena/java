@@ -1,0 +1,160 @@
+
+7. Java Collections Framework – Map & Sorting: To demonstrate Map interface and sorting techniques. 
+
+
+7.a) Use HashMap to store key-value pairs. 
+
+Aim:
+To create and use a HashMap in Java to store key-value pairs.
+
+PROGRAM :- 
+
+import java.util.HashMap;
+public class HashMapDemo {
+    public static void main(String[] args) {
+        HashMap<Integer, String> students = new HashMap<Integer, String>();
+        // Add key-value pairs
+        students.put(101, "Rahul");
+        students.put(102, "Priya");
+        students.put(103, "Amit");
+        // Display HashMap
+        System.out.println("Student Details:");
+        System.out.println(students);
+    }
+} 
+
+OUTPUT :- 
+
+Student Details:
+{101=Rahul, 102=Priya, 103=Amit}
+
+
+7.b) Traverse map using entrySet(). 
+
+Aim:
+To write a simple Java program to traverse a HashMap using the entrySet() method and display its key-value pairs.
+
+Program :- 
+
+import java.util.HashMap;
+import java.util.Map;
+public class MapEntrySetExample {
+    public static void main(String[] args) {
+        // Create a HashMap
+        HashMap<Integer, String> student = new HashMap<>();
+        // Add elements
+        student.put(101, "Anil");
+        student.put(102, "Bala");
+        student.put(103, "Charan");
+        // Traverse the map using entrySet()
+        System.out.println("Student Details:");
+        for (Map.Entry<Integer, String> entry : student.entrySet()) {
+            System.out.println("ID: " + entry.getKey() +
+                               "  Name: " + entry.getValue());
+        }
+    }
+}
+
+OUTPUT :- 
+
+Student Details:
+ID: 101  Name: Anil
+ID: 102  Name: Bala
+ID: 103  Name: Charan
+
+
+7.C) Sort objects using Comparable interface
+
+Aim:
+To write a Java program to sort objects using the Comparable interface.
+
+Program :- 
+
+import java.util.*;
+class Student implements Comparable<Student> {
+    int id;
+    String name;
+
+    // Constructor
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // Compare students by ID
+    public int compareTo(Student s) {
+        return this.id - s.id;
+    }
+}
+
+public class ComparableDemo {
+    public static void main(String[] args) {
+
+        ArrayList<Student> students = new ArrayList<>();
+
+        students.add(new Student(103, "Ravi"));
+        students.add(new Student(101, "Anil"));
+        students.add(new Student(102, "Priya"));
+
+        // Sort the objects
+        Collections.sort(students);
+
+        // Display sorted list
+        System.out.println("Students after sorting:");
+        for (Student s : students) {
+            System.out.println(s.id + " " + s.name);
+        }
+    }
+}
+
+OUTPUT :- 
+
+Students after sorting:
+101 Anil
+102 Priya
+103 Ravi
+
+7.d)  Sort objects using Comparator interface.
+
+Aim
+To write a simple Java program to sort objects using the Comparator interface.
+
+Program :- 
+
+import java.util.*;
+// Student class
+class Student {
+    int id;
+    String name;
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+// Comparator class to sort by Name
+class NameComparator implements Comparator<Student> {
+    public int compare(Student s1, Student s2) {
+        return s1.name.compareTo(s2.name);
+    }
+}
+public class ComparatorExample {
+    public static void main(String[] args) {
+        ArrayList<Student> list = new ArrayList<>();
+        list.add(new Student(103, "Ravi"));
+        list.add(new Student(101, "Anil"));
+        list.add(new Student(102, "Priya"));
+        // Sort by name
+        Collections.sort(list, new NameComparator());
+        System.out.println("Students sorted by Name:");
+        for (Student s : list) {
+            System.out.println(s.id + " " + s.name);
+        }
+    }
+}
+
+OUTPUT :- 
+
+Students sorted by Name:
+101 Anil
+102 Priya
+103 Ravi
