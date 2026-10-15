@@ -1,0 +1,160 @@
+
+6. Java Collections Framework – List & Set: To use Collection classes for storing and processing data. 
+
+6. a) Use ArrayList to store student objects. 
+
+Aim:
+To create and use an ArrayList in Java to store and display student objects.
+
+PROGRAM :- 
+
+import java.util.ArrayList;
+class Student {
+    int rollNo;
+    String name;
+    Student(int rollNo, String name) {
+        this.rollNo = rollNo;
+        this.name = name;
+    }
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+        System.out.println();
+    }
+}
+public class StudentArrayList {
+    public static void main(String[] args) {
+
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(new Student(101, "Rahul"));
+        students.add(new Student(102, "Priya"));
+        students.add(new Student(103, "Amit"));
+        System.out.println("Student Details:");
+        for (Student s : students) {
+            s.display();
+        }
+    }
+}
+
+OUTPUT :- 
+
+Student Details:
+
+Roll No: 101
+Name: Rahul
+
+Roll No: 102
+Name: Priya
+
+Roll No: 103
+Name: Amit
+
+
+6. b) Perform add, remove, search operations. 
+
+Aim:
+To perform add, remove, and search operations using ArrayList in Java.
+
+Program :- 
+
+import java.util.ArrayList;
+public class ArrayListOperations {
+    public static void main(String[] args) {
+        ArrayList<String> students = new ArrayList<String>();
+
+        // Add elements
+        students.add("Rahul");
+        students.add("Priya");
+        students.add("Amit");
+        System.out.println("Students after adding:");
+        System.out.println(students);
+
+        // Remove an element
+        students.remove("Priya");
+        System.out.println("Students after removing Priya:");
+        System.out.println(students);
+
+        // Search an element
+        if (students.contains("Amit")) {
+            System.out.println("Amit is found.");
+        } else {
+            System.out.println("Amit is not found.");
+        }
+    }
+}
+
+Output :-
+
+Students after adding:
+[Rahul, Priya, Amit]
+Students after removing Priya:
+[Rahul, Amit]
+Amit is found.
+
+6.c) Use HashSet to store unique elements. 
+
+Aim:
+To create and use a HashSet in Java to store unique elements.
+
+PROGRAM :- 
+
+import java.util.HashSet;
+public class HashSetDemo {
+    public static void main(String[] args) {
+        HashSet<String> names = new HashSet<String>();
+        // Add elements
+        names.add("Rahul");
+        names.add("Priya");
+        names.add("Amit");
+        names.add("Rahul");   // Duplicate element
+        System.out.println("Unique Elements:");
+        System.out.println(names);
+    }
+}
+
+Output :-
+
+Unique Elements:
+[Rahul, Priya, Amit]
+
+
+6.d) Iterate collections using Iterator and for-each loop.
+
+Aim:
+To iterate through a collection using Iterator and for-each loop in Java.
+
+PROGRAM :- 
+
+import java.util.ArrayList;
+import java.util.Iterator;
+public class IteratorDemo {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Rahul");
+        names.add("Priya");
+        names.add("Amit");
+        // Using Iterator
+        System.out.println("Using Iterator:");
+        Iterator<String> it = names.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+        // Using For-Each Loop
+        System.out.println("\nUsing For-Each Loop:");
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}
+
+OUTPUT :- 
+
+Using Iterator:
+Rahul
+Priya
+Amit
+Using For-Each Loop:
+Rahul
+Priya
+Amit
+
