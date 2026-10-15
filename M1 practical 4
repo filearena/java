@@ -1,0 +1,149 @@
+4. Exception Handling: To demonstrate exception handling mechanisms in Java. 
+
+4. a) Write a program using try-catch-finally. 
+
+Aim:
+To write a Java program using try-catch-finally for exception handling.
+
+Program :- 
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int a = 10;
+            int b = 0;
+            int c = a / b;   // Exception occurs
+            System.out.println("Result = " + c);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+        }
+        finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+}
+
+OUTPUT :- 
+
+Cannot divide by zero.
+Finally block executed.
+
+4.b) Handle built-in exceptions (ArithmeticException,
+NullPointerException). 
+
+Aim:
+   To write a Java program that handles the built-in exceptions ArithmeticException and NullPointerException using try-catch.
+
+PROGRAM :- 
+
+public class Main {
+    public static void main(String[] args) {
+        // Handling ArithmeticException
+        try {
+            int a = 10;
+            int b = 0;
+            int c = a / b;
+            System.out.println(c);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception: Cannot divide by zero.");
+        }
+        // Handling NullPointerException
+        try {
+            String str = null;
+            System.out.println(str.length());
+        }
+        catch (NullPointerException e) {
+             System.out.println("Null Pointer Exception: String is null.");
+        }
+    System.out.println("Program executed successfully.");
+    }
+}
+
+Output :- 
+
+Arithmetic Exception: Cannot divide by zero.
+Null Pointer Exception: String is null.
+Program executed successfully.
+
+
+4.c) Implement multiple catch blocks. 
+
+Aim:
+To write a Java program using multiple catch blocks to handle different types of exceptions.
+
+Program :- 
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+            int arr[] = {10, 20, 30};
+
+            int a = 10 / 0;          // ArithmeticException
+            System.out.println(arr[5]); // ArrayIndexOutOfBoundsException
+        }
+
+        catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception: Cannot divide by zero.");
+        }
+
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out Of Bounds Exception.");
+        }
+
+        catch (Exception e) {
+            System.out.println("General Exception.");
+        }
+
+        System.out.println("Program executed successfully.");
+    }
+}
+
+OUTPUT :- 
+
+Arithmetic Exception: Cannot divide by zero.
+Program executed successfully.
+
+4.d) Create and use a user-defined exception.
+
+Aim:
+To create and use a user-defined exception in Java.
+
+Program :- 
+
+// User-defined exception class
+class InvalidAgeException extends Exception {
+
+    InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    static void checkAge(int age) throws InvalidAgeException {
+
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above.");
+        }
+        else {
+            System.out.println("You are eligible to vote.");
+        }
+    }
+    public static void main(String[] args) {
+        try {
+            checkAge(16);
+        }
+        catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+OUTPUT :- 
+
+Age must be 18 or above.
+
+
+
