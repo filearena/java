@@ -1,6 +1,11 @@
 2. Inheritance and Polymorphism: To demonstrate inheritance and runtime polymorphism. 
 
 a) Create a base class Person and derived class Employee. 
+B.Demonstrate Single Inheritance
+C.Override a Method to Show Runtime Polymorphism
+d): Use super Keyword
+
+a) Create a base class Person and derived class Employee. 
 
 Aim:
 To create a base class Person and a derived class Employee using inheritance in Java.
