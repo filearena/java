@@ -1,6 +1,10 @@
 
 7. Java Collections Framework – Map & Sorting: To demonstrate Map interface and sorting techniques. 
 
+a) Use HashMap to store key-value pairs. 
+b) Traverse map using entrySet(). 
+C) Sort objects using Comparable interface
+d)  Sort objects using Comparator interface.
 
 7.a) Use HashMap to store key-value pairs. 
 
