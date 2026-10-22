@@ -1,5 +1,11 @@
 4. Exception Handling: To demonstrate exception handling mechanisms in Java. 
 
+a) Write a program using try-catch-finally. 
+b) Handle built-in exceptions (ArithmeticException,
+NullPointerException). 
+c) Implement multiple catch blocks.
+d) Create and use a user-defined exception.
+
 4. a) Write a program using try-catch-finally. 
 
 Aim:
