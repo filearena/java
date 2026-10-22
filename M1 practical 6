@@ -1,6 +1,11 @@
 
 6. Java Collections Framework – List & Set: To use Collection classes for storing and processing data. 
 
+a) Use ArrayList to store student objects. 
+b) Perform add, remove, search operations. 
+c) Use HashSet to store unique elements. 
+d) Iterate collections using Iterator and for-each loop.
+
 6. a) Use ArrayList to store student objects. 
 
 Aim:
