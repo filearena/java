@@ -1,5 +1,10 @@
 1. OOP Concepts – Class, Object & Methods: To implement basic Object-Oriented Programming concepts in Java.
 
+a) Create a class Student with data members and methods.
+b) Demonstrate Object Creation and Method Invocation
+c) Implement Constructor (Default and Parameterized)
+d) Demonstrate method overloading.
+
 1.a) a) Create a class Student with data members and methods.
 
 Aim
