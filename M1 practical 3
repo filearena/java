@@ -1,5 +1,10 @@
 3. Abstraction and Interfaces: To implement abstraction using abstract classes and interfaces.
 
+a) Create an abstract class Shape with abstract method area().
+b) Implement subclasses Circle and Rectangle.
+c) Create an interface Printable and implement it in a class. 
+d) Demonstrate multiple inheritance using interfaces.
+
 3.a) Create an abstract class Shape with abstract method area().
 
 Aim:
