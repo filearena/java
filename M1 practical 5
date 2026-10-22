@@ -1,5 +1,9 @@
 5. Multithreading: To implement multithreading concepts in Java. 
 
+a) Create a thread using Thread class.
+b) Create a thread using Runnable interface. 
+c) Demonstrate thread lifecycle. 
+d) Implement synchronization using synchronized keyword.
 
 5. a) Create a thread using Thread class.
 
