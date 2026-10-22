@@ -2,6 +2,11 @@
 8. File Handling: To perform file operations in Java. 
 
 a) Create and write data into a file using FileWriter. 
+b) Read data using FileReader and BufferedReader.
+c) Append data to existing file. 
+d) Count number of words/lines in a file.
+
+a) Create and write data into a file using FileWriter. 
 
 Aim:
 To write a simple Java program to create a file and write data into it using the FileWriter class.
